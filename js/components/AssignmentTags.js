@@ -7,7 +7,7 @@ export default {
                     'border-blue-400 text-blue-400': tag === currentTag
                 }"
                 v-for="tag in tags"
-                @click="$emit('change', tag)"
+                @click="$emit('update:currentTag', tag)"
             >{{ tag }}</button>
          </div>
     `,
