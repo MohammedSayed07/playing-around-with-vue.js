@@ -2,7 +2,7 @@ export default {
     template: `
         <div class="flex gap-2">
             <button
-                class="border px-1 py-px hover:border-blue-400 hover:text-blue-400"
+                class="border px-1 py-px hover:border-blue-400 hover:text-blue-400 rounded"
                 :class="{
                     'border-blue-400 text-blue-400': tag === currentTag
                 }"

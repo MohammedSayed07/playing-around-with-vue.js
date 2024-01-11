@@ -3,17 +3,25 @@ import AssignmentCreate from "./AssignmentCreate.js";
 export default {
     components: { AssignmentList, AssignmentCreate },
     template: `
-        <section class="space-y-3 mb-5">
-          <assignment-list :assignments="filters.inProgress" heading="In Progress" ></assignment-list>
-          <assignment-list :assignments="filters.completed" heading="Completed"></assignment-list>
+        <section class="mb-5 flex gap-8">
+          <assignment-list :assignments="filters.inProgress" heading="In Progress" >
+            <assignment-create @add="add" class="mt-4"></assignment-create>
+          </assignment-list>
+          <assignment-list 
+              v-show="hide"
+              :assignments="filters.completed" heading="Completed" 
+              can-hide 
+              @hide-assignments="hide = false"
+          ></assignment-list>
         </section>
+
         
-        <assignment-create @add="add"></assignment-create>
     `,
 
     data() {
         return {
-            assignments: []
+            assignments: [],
+            hide: true
         }
     },
     created() {
@@ -38,7 +46,8 @@ export default {
             this.assignments.push({
                 id: this.assignments.length + 1,
                 title: title,
-                complete: false
+                complete: false,
+                tag:"math"
             })
         }
     }
