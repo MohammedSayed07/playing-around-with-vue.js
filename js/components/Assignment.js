@@ -4,7 +4,7 @@ export default {
           <label class="flex justify-between items-center">
             {{ assignment.title }}
             
-            <input type="checkbox" v-model="assignment.complete" class="ml-3"/>
+            <input type="checkbox" v-model="assignment.complete"/>
           </label>
         </li>
     `,

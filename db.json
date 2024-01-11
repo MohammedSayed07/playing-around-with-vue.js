@@ -17,6 +17,12 @@
       "title": "third item",
       "complete": false,
       "tag": "math"
+    },
+    {
+      "id": 4,
+      "title": "fourth item",
+      "complete": true,
+      "tag": "science"
     }
   ]
 }

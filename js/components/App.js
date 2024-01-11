@@ -1,4 +1,5 @@
 import Assignments from "./Assignments.js";
+
 export default {
     components: {
         'assignments': Assignments,
@@ -6,6 +7,7 @@ export default {
 
     template: `
         <assignments></assignments>
+
     `
 
 }
